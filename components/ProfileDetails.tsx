@@ -1,5 +1,6 @@
 import React from 'react'
-import { Image, Text, View } from 'react-native'
+import { Image, View } from 'react-native'
+import CustomText from './ui/CustomText'
 import IconButton from './ui/IconButton'
 
 
@@ -11,8 +12,10 @@ const ProfileDetails = () => {
                 className='max-w-36 max-h-36 rounded-full'
             />
 
-            <Text className='text-2xl font-bold'>Milton Velasquez</Text>
-            <Text className='text-xl text-gray-400 font-bold'>Software Engineer</Text>
+            <CustomText variant='title' value="Milton Velasquez"/>
+            <CustomText variant='subtitle' value="Profesor"/>
+            
+            
             <IconButton iconName='logo-instagram'></IconButton>
             <IconButton iconName='logo-facebook'></IconButton>
             <IconButton iconName='logo-whatsapp'></IconButton>
