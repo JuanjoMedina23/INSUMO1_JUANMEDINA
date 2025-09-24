@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, Text, View } from 'react-native'
-import IconButton from './IconButton'
+import IconButton from './ui/IconButton'
 
 
 const ProfileDetails = () => {
