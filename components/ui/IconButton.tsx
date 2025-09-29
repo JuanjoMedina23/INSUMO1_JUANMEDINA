@@ -1,25 +1,23 @@
-//Importaciones
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
 import { Pressable } from 'react-native';
-//Interfaces
-interface IconButtonProps{
-    presionar?: () => void;//FUncion que se ejecuta al presionar el boton
-    iconName:string;//Nombre del icono
-    color?:string;//Color del icono (?: opcional)
+
+interface IconButtonProps {
+    presionar?: () => void; // Función que se ejecuta al presionar el botón
+    iconName: string;       // Nombre del icono
+    color?: string;         // Color del icono (opcional)
 }
-//Principal
-const IconButton = ({iconName,presionar}:IconButtonProps) => {
-  return (
-    <Pressable onPress={presionar}>
-        <Ionicons 
-            name={iconName as any}
-            size={24} 
-            color="black" 
-        />
-    </Pressable>
-  )
+
+const IconButton = ({ iconName, presionar, color = "black" }: IconButtonProps) => {
+    return (
+        <Pressable onPress={presionar}>
+            <Ionicons 
+                name={iconName as any} 
+                size={24} 
+                color={color} 
+            />
+        </Pressable>
+    )
 }
-//export
-export default IconButton
-//funciones complentarias
+
+export default IconButton;
